@@ -22,7 +22,9 @@ import { Link } from 'react-router-dom';
             <p>By: {seller}</p>
             <p>${price}</p>
             <p>Only {stock} left in stock - order soon</p>
-            <button onClick={() => props.handleAddProduct(props.product)} className="main-button"><FontAwesomeIcon icon={faShoppingCart}/> add to cart</button>
+            {props.showAddToCart === true &&
+                 <button onClick={() => props.handleAddProduct(props.product)} className="main-button"><FontAwesomeIcon icon={faShoppingCart}/> add to cart</button>
+            }
             </div>
             
         </div>
